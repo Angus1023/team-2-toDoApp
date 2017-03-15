@@ -4,7 +4,8 @@ angular.module('toDoApp').service('mainService', function(){
 	this.addToDo = function(toDo, list){
 		list.push({toDo: toDo, checked: false, id: id});
 		id++;
-	};
+		return list;
+};
 
 	this.deleteToDo = function(toDoId, list){
 		for(var i=0; i<list.length; i++){
